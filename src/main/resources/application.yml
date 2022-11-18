@@ -7,4 +7,4 @@ mpesa:
     consumer-key: 62zWEcdCvGgNp7nMpBN5KkME8Y7Neh1O
     consumer-secret: Uwhm1lAoIO6xc05k
     grant-type: client_credentials
-    oauth-endpoint: https://sandbox.safaricom.co.ke/oauth/v1/generate
+    base-url: https://sandbox.safaricom.co.ke

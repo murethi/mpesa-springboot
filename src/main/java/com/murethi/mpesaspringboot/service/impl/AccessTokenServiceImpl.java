@@ -31,8 +31,10 @@ public class AccessTokenServiceImpl implements AccessTokenService {
         String encodedCredentials = Base64.getEncoder().encodeToString(formattedCredentials.getBytes());
         //TODO add auth headers
         return webClient.build().get()
-                .uri(mpesaConfiguration.getOauthEndpoint(), uriBuilder
-                        -> uriBuilder.queryParam("grant_type",mpesaConfiguration.getGrantType())
+                .uri(mpesaConfiguration.getBaseUrl(), uriBuilder
+                        -> uriBuilder
+                        .path("/oauth/v1/generate")
+                        .queryParam("grant_type",mpesaConfiguration.getGrantType())
                         .build())
                 .header(AUTHORIZATION_HEADER_STRING,String.format("%s %s",BASIC_AUTH_STRING,encodedCredentials))
                 .retrieve()

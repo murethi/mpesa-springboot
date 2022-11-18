@@ -12,12 +12,12 @@ public class MpesaConfiguration {
     private String consumerKey;
     private String consumerSecret;
     private String grantType;
-    private String oauthEndpoint;
+    private String baseUrl;
 
     @Override
     public String toString(){
         return String.format("consumerKey='%s', consumerSecret='%s', grantType='%s',oauthEndpoint='%s'",
-                consumerKey,consumerSecret,grantType,oauthEndpoint
+                consumerKey,consumerSecret,grantType,baseUrl
                 );
     }
 }
